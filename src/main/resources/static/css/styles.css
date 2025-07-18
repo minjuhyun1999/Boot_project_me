@@ -1,0 +1,84 @@
+.weather-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.weather-container.collapsed {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.weather-container.collapsed #weatherInfo {
+    display: none;
+}
+
+.weather-container.expanded {
+    width: auto;
+    min-width: 250px;
+}
+
+#weatherInfo {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.weather-button {
+    transition: all 0.3s ease;
+}
+
+.weather-button.expanded {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* 부산 날씨/맛집 위젯 스타일 */
+.feature-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+#weatherInfo, #foodInfo {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    display: none;
+}
+#foodInfo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+#foodInfo th, #foodInfo td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#foodInfo th {
+    background-color: #f2f2f2;
+}
